@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "include/bubbleSort.h"
+#include "../include/bubbleSort.h"
 
 
 void swap(struct data *a, struct data *b) {

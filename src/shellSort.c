@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "shellSort.h"
+#include "../include/shellSort.h"
 
 void
 shellSort(struct data vector[], int n) {

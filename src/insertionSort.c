@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "insertionSort.h"
+#include "../include/insertionSort.h"
 
 void
 insertionSort(struct data vector[], int n) {

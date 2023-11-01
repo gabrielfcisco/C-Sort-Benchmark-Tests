@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "include/data.h"
-#include "include/insertionSort.h"
-#include "include/bubbleSort.h"
-#include "include/shellSort.h"
+#include "../include/data.h"
+#include "../include/insertionSort.h"
+#include "../include/bubbleSort.h"
+#include "../include/shellSort.h"
 // #include "mergeSort.h"
 // #include "quickSort.h"
 
