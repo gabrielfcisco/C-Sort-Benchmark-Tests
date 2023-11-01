@@ -7,10 +7,10 @@ merge(struct data vector[], int left, int middle, int right) {
     int n1 = middle - left + 1;
     int n2 = right - middle;
 
-    // Cria vectores temporários para armazenar os elementos da metade esquerda e direita
+    // Cria vetores temporários para armazenar os elementos da metade esquerda e direita
     struct data L[n1], R[n2];
 
-    // Copia os dados para os vectores temporários L[] e R[]
+    // Copia os dados para os vetores temporários L[] e R[]
     for (i = 0; i < n1; i++) {
         L[i] = vector[left + i];
     }
@@ -22,7 +22,7 @@ merge(struct data vector[], int left, int middle, int right) {
     j = 0;
     k = left;
 
-    // Mescla os vectores temporários de volta ao vector original em ordem decrescente
+    // Mescla os vetores temporários de volta ao vector original em ordem decrescente
     while (i < n1 && j < n2) {
         if (L[i].key >= R[j].key) {
             vector[k] = L[i];
