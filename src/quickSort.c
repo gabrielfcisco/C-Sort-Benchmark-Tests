@@ -2,7 +2,7 @@
 #include "../include/quickSort.h"
 
 // Função para trocar dois elementos da struct
-void swap(struct data *a, struct data *b) {
+void swapQuick(struct data *a, struct data *b) {
     struct data temp = *a;
     *a = *b;
     *b = temp;
@@ -16,11 +16,11 @@ int partition(struct data array[], int low, int high) {
     for (int j = low; j <= high - 1; j++) {
         if (array[j].key >= pivot) {
             i++;
-            swap(&array[i], &array[j]);
+            swapQuick(&array[i], &array[j]);
         }
     }
 
-    swap(&array[i + 1], &array[high]);
+    swapQuick(&array[i + 1], &array[high]);
     return (i + 1);
 }
 

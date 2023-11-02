@@ -2,7 +2,7 @@
 #include "../include/bubbleSort.h"
 
 
-void swap(struct data *a, struct data *b) {
+void swapBubble(struct data *a, struct data *b) {
     struct data temp = *a;
     *a = *b;
     *b = temp;
@@ -14,7 +14,7 @@ void bubbleSort(struct data vector[], int n) {
         for (int j = 0; j < n - i - 1; j++) {
             // Para ordenação decrescente, troque ">" por "<"
             if (vector[j].key < vector[j + 1].key) {
-                swap(&vector[j], &vector[j + 1]);
+                swapBubble(&vector[j], &vector[j + 1]);
             }
         }
     }

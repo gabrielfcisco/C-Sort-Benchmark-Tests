@@ -3,7 +3,7 @@
 
 #include "data.h"
 
-void swap(struct data *a, struct data *b);
+void swapQuick(struct data *a, struct data *b);
 
 int partition(struct data array[], int low, int high);
 
