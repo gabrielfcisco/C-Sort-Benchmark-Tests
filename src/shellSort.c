@@ -7,7 +7,13 @@ void shellSort(struct data array[], int n)
     struct data temp;
 
     // Define o tamanho do gap inicial
-    for (gap = n / 2; gap > 0; gap /= 2)
+    gap = 1;
+    while(gap < n/3)
+    {
+        gap = 3 * gap + 1;
+    }
+
+    while(gap > 0)
     {
         for (i = gap; i < n; i++)
         {
