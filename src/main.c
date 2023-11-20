@@ -7,6 +7,7 @@
 #include "../include/shellSort.h"
 #include "../include/mergeSort.h"
 #include "../include/quickSort.h"
+#include "../include/timSort.h"
 
 #define TAM_ARRAY 100
 
@@ -29,7 +30,7 @@ int main()
     }
     clock_t begin = clock();
 
-    quickSort(array, 0, n-1, 'h');
+    timSort(array, n);
 
     clock_t end = clock();
     double timeSpent = (double) (end - begin) / CLOCKS_PER_SEC ;
