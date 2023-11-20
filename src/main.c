@@ -29,7 +29,7 @@ int main()
     }
     clock_t begin = clock();
 
-    shellSort(array, n);
+    quickSort(array, 0, n-1, 'h');
 
     clock_t end = clock();
     double timeSpent = (double) (end - begin) / CLOCKS_PER_SEC ;

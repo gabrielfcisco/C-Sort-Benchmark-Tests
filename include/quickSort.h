@@ -5,8 +5,10 @@
 
 void swapQuick(struct data *a, struct data *b);
 
-int partition(struct data array[], int low, int high);
+int limitPivot(int low, int high, char limit);
 
-void quickSort(struct data array[], int low, int high);
+int partition(struct data array[], int low, int high, char limit);
+
+void quickSort(struct data array[], int low, int high, char limit);
 
 #endif
