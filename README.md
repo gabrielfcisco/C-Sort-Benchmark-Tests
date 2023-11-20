@@ -21,7 +21,7 @@ Clone the repository to your machine, navigate to the directory, and then run th
 make all
 ```
 
-Next, execute the binary generated in the bin directory:
+Next, execute the binary generated in the `bin` directory:
 
 ```bash
 ./bin/PROJETO2
