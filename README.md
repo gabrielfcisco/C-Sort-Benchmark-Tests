@@ -1,8 +1,9 @@
 # C-Sort Benchmark Tests
 
-This code was made for testing efficiency of the most used sort algorithms in C.
+This code was created to test the efficiency of commonly used sorting algorithms in C.
 
-The algorithms testing was:
+The algorithms tested include:
+
 - Bubble Sort
 - Insertion Sort
 - Merge Sort
@@ -10,23 +11,24 @@ The algorithms testing was:
 - Shell Sort
 - Tim Sort
 
-> All the algorithms sorting data in decreasing order.
+> All algorithms sort data in decreasing order.
 
-### Step-by-Step
+## Step-by-Step
 
-Clone the repo in your machine, entry in the directory, then call the Makerfile:
+Clone the repository to your machine, navigate to the directory, and then run the Makefile:
 
-```c
+```bash
 make all
 ```
 
-So execute the binary generated in directory `bin`:
+Next, execute the binary generated in the bin directory:
 
-```c
+```bash
 ./bin/PROJETO2
 ```
 
-## :busts_in_silhouette: Colaboradores:
+## :busts_in_silhouette: Contributors
+
 -  [gabrielfciso](https://github.com/gabrielfcisco/)
 
-### Qualquer dúvida ou contribuição, é só nos contatar!
+### For any issues, please send us a message!
