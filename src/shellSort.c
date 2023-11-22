@@ -24,5 +24,6 @@ void shellSort(struct data array[], int n)
             }
             array[j] = temp;
         }
+        gap = (gap - 1) / 3;
     }
 }

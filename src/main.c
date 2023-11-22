@@ -9,12 +9,12 @@
 #include "../include/quickSort.h"
 #include "../include/timSort.h"
 
-#define TAM_ARRAY 100
+#define TAM_ARRAY 100000
 
 int main()
 {   
-    struct data array[TAM_ARRAY];
     int n = TAM_ARRAY;
+    struct data *array = malloc(n*sizeof(struct data));
 
     srand(0);
 
@@ -23,25 +23,29 @@ int main()
         array[i].field = rand() %(RAND_MAX - 100 + 1) + 100;
     }
 
-    printf("Vetor original:\n");
-    for (int i = 0; i < n; i++)
-    {
-        printf("key: %d, field: %f\n", array[i].key, array[i].field);
-    }
+    // printf("Vetor original:\n");
+    // for (int i = 0; i < n; i++)
+    // {
+    //     printf("key: %d, field: %f\n", array[i].key, array[i].field);
+    // }
+    printf("\nExecutando ordenacao...");
+
     clock_t begin = clock();
 
-    timSort(array, n);
+    insertionSort(array, n);
 
     clock_t end = clock();
     double timeSpent = (double) (end - begin) / CLOCKS_PER_SEC ;
 
-    printf("\nVetor ordenado em ordem decrescente:\n");
-    for (int i = 0; i < n; i++)
-    {
-        printf("key: %d, field: %f\n", array[i].key, array[i].field);
-    }
+    // printf("\nVetor ordenado em ordem decrescente:\n");
+    // for (int i = 0; i < n; i++)
+    // {
+    //     printf("key: %d, field: %f\n", array[i].key, array[i].field);
+    // }
 
-    printf("\n\n Tempo para ordenação gasto:%lf\n", timeSpent);
+    printf("\nOrdenacao concluida!\n\nTempo para ordenação gasto:%lf\n", timeSpent);
+
+    free(array);
 
     return 0;
 }
