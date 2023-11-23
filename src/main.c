@@ -9,22 +9,38 @@
 #include "../include/quickSort.h"
 #include "../include/timSort.h"
 
+
+void inProcess(int n, int f);
+
 int main()
 
 {   
     for (int i = 0; i<6; i++){
 
+        printf("======================================================\n\n");
+        printf("Ordenacao de 10000 elementos\n");
         inProcess(10000, i);
+        printf("======================================================\n\n");
+        printf("Ordenacao de 50000 elementos\n");
         inProcess(50000, i);
+        printf("======================================================\n\n");
+        printf("Ordenacao de 100000 elementos\n");
         inProcess(100000, i);
+        printf("======================================================\n\n");
+        printf("Ordenacao de 500000 elementos\n");
         inProcess(500000, i);
+        printf("======================================================\n\n");
+        printf("Ordenacao de 1000000 elementos\n");
         inProcess(1000000, i);
+        
     }
+
+    system("pause");
 
    return 0;
 }
 
-double inProcess(int n, int f) {
+void inProcess(int n, int f) {
 
     struct data *array = malloc(n*sizeof(struct data));
 
@@ -45,7 +61,8 @@ double inProcess(int n, int f) {
         // {
         //     printf("key: %d, field: %f\n", array[i].key, array[i].field);
         // }
-        printf("\nExecutando ordenacao... [%d] Método [%d]", i+1, f);
+
+        printf("\nExecutando ordenacao... [%d] Metodo [%d]", i+1, f);
 
         switch (f) {
 
@@ -56,6 +73,8 @@ double inProcess(int n, int f) {
                 insertionSort(array, n);
 
                 end = clock();
+
+
 
             break;
 
@@ -93,7 +112,7 @@ double inProcess(int n, int f) {
 
                 begin = clock();
             
-                quickSort(array, 0, n, h);
+                quickSort(array, 0, n, 'h');
 
                 end = clock();
 
@@ -119,11 +138,11 @@ double inProcess(int n, int f) {
         //     printf("key: %d, field: %f\n", array[i].key, array[i].field);
         // }
 
-        printf("\nOrdenacao concluida!\n\nTempo para ordenação gasto:%lf\n", timeSpent);
+        printf("\nOrdenacao concluida!\n\nTempo para ordenacao gasto: %lf\n", timeSpent);
 
-        free(array);
+        
     }
-    return 0;
 
+    free(array);
 
 }
